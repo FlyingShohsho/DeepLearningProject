@@ -1,6 +1,9 @@
 # Predicting the Olympic Medal Table - ECE046211 Final Project - Spring 2024
 
 This project aims to simplify and enhance the accuracy of predicting the number of Olympic medals per country. We utilize a transformer model for feature extraction and build our predictions based on various features derived from historical data. The project is implemented in Python using the libraries PyTorch, NumPy, Pandas and SciKit-Learn.
+<p align="middle">
+  <img src="./assets/Paris2024.png" height="200">
+</p>
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -10,7 +13,6 @@ This project aims to simplify and enhance the accuracy of predicting the number 
 - [Model](#model)
 - [Results](#results)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 - [Authors](#authors)
 
@@ -140,6 +142,7 @@ While working on this project, we had a few ideas for future work:
 ### Refrences
 * [Attention is All You Need](https://arxiv.org/abs/1706.03762)
 * [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+* [google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased?text=The+goal+of+life+is+%5BMASK%5D)
 
 ## Authors
 
