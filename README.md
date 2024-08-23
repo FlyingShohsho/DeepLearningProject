@@ -137,7 +137,7 @@ While working on this project, we had a few ideas for future work:
 * The datasets were taken from Kaggle: [Olympic Historical Dataset From Olympedia.org](https://www.kaggle.com/datasets/josephcheng123456/olympic-historical-dataset-from-olympediaorg/data), [Paris 2024 Olympic Summer Games](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games).
 * The Neural Network and Optuna implementation is taken from [ECE 046211 Tutorials](https://github.com/taldatech/ee046211-deep-learning)
 * The project aims to build on a previous method review with a new approach: [Olympics-Medal-Prediction](https://github.com/hrugved06/Olympics-Medal-Prediction)
-* We also found a project which was done at the same time as ours, and aimed to beat it with our approach: [Olympics 2024 predictions](https://www.kaggle.com/code/asfefdgrg/olympics-2024-predictions#2.-Identifying-and-Gathering-Data-Sources)
+* We also found a project which was done at the same time as ours, and aimed to beat it with our approach: [Olympics 2024 predictions](https://www.kaggle.com/code/asfefdgrg/olympics-2024-predictions)
 * With our deepest apologies to all Elementary school teachers out there... [Wikipedia](https://www.wikipedia.org/)
 ### Refrences
 * [Attention is All You Need](https://arxiv.org/abs/1706.03762)
