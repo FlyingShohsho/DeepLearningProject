@@ -18,7 +18,7 @@ This project focuses on predicting Olympic outcomes using advanced machine learn
 - [License](#license)
 - [Authors](#authors)
 
-## project-overview
+## Project Overview
 
 The task of predicting the Olympic medal table is complex due to the numerous factors involved. In this project, we leverage a transformer model to extract meaningful features and predict the number of medals that each country will win. The project is part of the course ECE046211 - Spring 2024, and focuses on making the prediction process more efficient and accurate.
 
