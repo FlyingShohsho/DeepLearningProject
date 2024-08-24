@@ -127,7 +127,6 @@ While working on this project, we had a few ideas for future work:
 
 - **Shoham Grunblat** - [GitHub](https://github.com/FlyingShosho) | [LinkedIn](https://www.linkedin.com/in/shoham-grunblat/)
 - **Liad Mordechai** - [GitHub](https://github.com/liadMor123) | [LinkedIn](https://www.linkedin.com/in/liad-mordechai/)
-- ECE046211 - Spring 2024
 
 ## Acknowledgments
 
