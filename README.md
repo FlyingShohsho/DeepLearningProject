@@ -1,8 +1,6 @@
 # Predicting the Olympic Medal Table - ECE046211 Final Project - Spring 2024
 ## Shoham Grunblat | Liad Mordechai
 
-This project focuses on predicting Olympic outcomes using advanced machine learning techniques, specifically leveraging the Paris 2024 Olympic Games as a real-time testing ground. Inspired by the global popularity of sports predictions and the significance of the Olympics, we aim to apply transformer-based models to automate feature extraction from plain text data. Our approach utilizes Hugging Face's bert-base-uncased model, which extracts 768 features, potentially streamlining the data processing pipeline compared to traditional methods. By building on previous work in Olympic predictions and incorporating the vast, well-documented Olympic dataset, we seek to create a robust prediction system that can handle the complex, human-driven nature of sports outcomes. This project not only explores the technical aspects of machine learning in sports analytics but also taps into the cultural and social significance of Olympic predictions. The project is implemented in Python using the libraries PyTorch, NumPy, Pandas and SciKit-Learn.
-
 <p align="middle">
   <img src="./assets/Paris2024.png" height="200">
 </p>
@@ -21,6 +19,11 @@ This project focuses on predicting Olympic outcomes using advanced machine learn
 ## Project Overview
 
 The task of predicting the Olympic medal table is complex due to the numerous factors involved. In this project, we leverage a transformer model to extract meaningful features and predict the number of medals that each country will win. The project is part of the course ECE046211 - Spring 2024, and focuses on making the prediction process more efficient and accurate.
+This project focuses on predicting Olympic outcomes using advanced machine learning techniques, specifically leveraging the Paris 2024 Olympic Games as a real-time testing ground. Inspired by the global popularity of sports predictions and the significance of the Olympics, we aim to apply transformer-based models to automate feature extraction from plain text data.
+Our approach utilizes Hugging Face's bert-base-uncased model, which extracts 768 features, potentially streamlining the data processing pipeline compared to traditional methods. 
+By building on previous work in Olympic predictions and incorporating the vast, well-documented Olympic dataset, we seek to create a robust prediction system that can handle the complex, human-driven nature of sports outcomes. 
+This project not only explores the technical aspects of machine learning in sports analytics but also taps into the cultural and social significance of Olympic predictions. 
+The project is implemented in Python using the libraries PyTorch, NumPy, Pandas and SciKit-Learn.
 
 ## Project Structure
 /code
@@ -54,7 +57,7 @@ Our project is fully integrated in a Jupyter Notebook. See `PredictingParis2024.
 |`Wikipedia-API`| `0.6.0`|
 ## Data
 
-The data used in this project includes historical Olympic records, country demographics, economic indicators, and other relevant features. It is assumed that the user will download and preprocess the data following the instructions provided in the notebook.
+Our project utilizes the Olympic Historical Dataset from Olympedia.org, available on Kaggle, which provides comprehensive data on medals won in the modern Olympic era. To standardize country listings, we created a dictionary mapping country names to their respective National Olympic Committee (NOC) codes. We then implemented a pipeline using the bert-base-uncased model to extract features from each participating country's Wikipedia page. As our test set, we used the Paris 2024 Olympic medal table, also sourced from Kaggle. The preprocessing stage involved standardizing data across both training and test sets, transforming the training data from an athlete-wise listing to a country-wise and year-wise format, and removing irrelevant information such as athlete names and disciplines. To mitigate order-of-magnitude biases, we applied a Standard Scaler to normalize and scale the BERT features. This comprehensive data preparation ensures a robust foundation for our Olympic medal prediction model.
 
 ### Data Preprocessing
 - Data cleaning, normalization, and feature extraction steps are detailed in the notebook.
@@ -62,7 +65,7 @@ The data used in this project includes historical Olympic records, country demog
 
 ## Model
 
-We employed a transformer model to extract features from the input data. The model was trained using PyTorch, and the following key components were used:
+We used a transformer model to extract features from the input data. The model was trained using PyTorch, and the following key components were used:
 
 - **Model Architecture**: bert-base-uncased architecture for feature extraction from Wikipedia-API; 3-layer Neural Network with Dropout and ReLU activation.
 - **Training**: The model was trained on the preprocessed dataset, with key hyperparameters being learning rate, dropout rate and layer widths.
