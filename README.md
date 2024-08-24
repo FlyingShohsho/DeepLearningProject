@@ -1,6 +1,8 @@
 # Predicting the Olympic Medal Table - ECE046211 Final Project - Spring 2024
+## Shoham Grunblat | Liad Mordechai
 
-This project aims to simplify and enhance the accuracy of predicting the number of Olympic medals per country. We utilize a transformer model for feature extraction and build our predictions based on various features derived from historical data. The project is implemented in Python using the libraries PyTorch, NumPy, Pandas and SciKit-Learn.
+This project focuses on predicting Olympic outcomes using advanced machine learning techniques, specifically leveraging the Paris 2024 Olympic Games as a real-time testing ground. Inspired by the global popularity of sports predictions and the significance of the Olympics, we aim to apply transformer-based models to automate feature extraction from plain text data. Our approach utilizes Hugging Face's bert-base-uncased model, which extracts 768 features, potentially streamlining the data processing pipeline compared to traditional methods. By building on previous work in Olympic predictions and incorporating the vast, well-documented Olympic dataset, we seek to create a robust prediction system that can handle the complex, human-driven nature of sports outcomes. This project not only explores the technical aspects of machine learning in sports analytics but also taps into the cultural and social significance of Olympic predictions. The project is implemented in Python using the libraries PyTorch, NumPy, Pandas and SciKit-Learn.
+
 <p align="middle">
   <img src="./assets/Paris2024.png" height="200">
 </p>
@@ -16,11 +18,11 @@ This project aims to simplify and enhance the accuracy of predicting the number 
 - [License](#license)
 - [Authors](#authors)
 
-## Project Overview
+## project-overview
 
 The task of predicting the Olympic medal table is complex due to the numerous factors involved. In this project, we leverage a transformer model to extract meaningful features and predict the number of medals that each country will win. The project is part of the course ECE046211 - Spring 2024, and focuses on making the prediction process more efficient and accurate.
 
-## Project Structure
+## project-structure
 /code
 
     PredictingParis2024.ipynb # Main notebook containing code and analysis
