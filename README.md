@@ -50,9 +50,15 @@ Our project is fully integrated in a Jupyter Notebook. See `PredictingParis2024.
 
 Our project utilizes the Olympic Historical Dataset from Olympedia.org, available on Kaggle, which provides comprehensive data on medals won in the modern Olympic era. To standardize country listings, we created a dictionary mapping country names to their respective National Olympic Committee (NOC) codes. We then implemented a pipeline using the bert-base-uncased model to extract features from each participating country's Wikipedia page. As our test set, we used the Paris 2024 Olympic medal table, also sourced from Kaggle. The preprocessing stage involved standardizing data across both training and test sets, transforming the training data from an athlete-wise listing to a country-wise and year-wise format, and removing irrelevant information such as athlete names and disciplines. To mitigate order-of-magnitude biases, we applied a Standard Scaler to normalize and scale the BERT features. This comprehensive data preparation ensures a robust foundation for our Olympic medal prediction model.
 
+#### Training Data
+`/data/Olympic_Games_Medal_Tally.csv` or download from Kaggle
+
+#### Test Set
+`/data/Paris2024_Medal_Table.csv`
+
 ### Data Preprocessing
 - Data cleaning, normalization, and feature extraction steps are detailed in the notebook.
-- Ensure that the data is correctly formatted and placed in the `/data` directory before running any scripts or notebooks.
+- Ensure that the data has been loaded into your Jupyter workspace.
 
 ## Model
 
