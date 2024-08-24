@@ -13,7 +13,7 @@
 - [Results](#results)
 - [Usage](#usage)
 - [Future Work](#future-work)
-- [Sources & References](#sources-and-references)
+- [Sources & References](#sources-&-references)
 - [License](#license)
 - [Authors](#authors)
 
