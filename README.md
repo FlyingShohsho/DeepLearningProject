@@ -23,12 +23,14 @@ The task of predicting the Olympic medal table is complex due to the numerous fa
 ## Project Structure
 /notebooks
 
-    DeepLearningProject_Shoham_Liad_Final.ipynb # Main notebook containing code and analysis
+    PredictingParis2024.ipynb # Main notebook containing code and analysis
 
 /data # Folder where data is stored
-/models # Folder where trained models are saved
-/scripts # Python scripts for data processing, model training, etc.
+
+/results #csv files with our predictions
+
 README.md # Project documentation
+
 requirements.txt # Python dependencies
 
 
@@ -38,7 +40,7 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/olympic-medal-prediction.git
+    git clone https://github.com/FlyingShosho/olympic-medal-prediction.git
     cd olympic-medal-prediction
     ```
 
@@ -81,20 +83,22 @@ The data used in this project includes historical Olympic records, country demog
 
 We employed a transformer model to extract features from the input data. The model was trained using PyTorch, and the following key components were used:
 
-- **Model Architecture**: Transformer-based architecture for feature extraction.
-- **Training**: The model was trained on the preprocessed dataset, with key hyperparameters like batch size, learning rate, and the number of epochs.
-- **Evaluation**: The model was evaluated using accuracy, mean squared error, and confusion matrices.
+- **Model Architecture**: bert-base-uncased architecture for feature extraction from Wikipedia-API; 3-layer Neural Network with Dropout and ReLU activation.
+- **Training**: The model was trained on the preprocessed dataset, with key hyperparameters being learning rate, dropout rate and layer widths.
+- **Evaluation**: Our loss function was MSE, with BCE being tested as well but yielding sub-optimal results. The model was evaluated using accuracy with tolerance.
 
 ### Key Hyperparameters
-- Batch size: [batch size]
-- Learning rate: [learning rate]
-- Number of epochs: [number of epochs]
+- Hidden Layer Widths: [961, 361, 256]
+- Learning Rate: [0.001]
+- Dropout Rate: [0.3235]
 
 ## Results
 
 We predicted 5 different metrics: Gold medals, Silver Medals, Bronze Medals, Predicted Total(a prediction based on previous total tallies), and Total Predicted(the sum of the separate colour predictions). Naturally, the total predicted and the predicted total were very similar, but predicting the total straightforwardly did slightly better than predicting medals separately and adding them up. This might be due to the fact that predicting a combined number gives more margin of error and doesn't account for the internal composition.
+In addition, we applied a weighted average of the medal accuracies to generate a total accuracies, taking into account that the final Olympic Table ranking prioritizes Gold, then Silver, then Bronze.
 
-We used two approaches for training and testing our model: the first was to predict for all the countries which participated in Paris and the second was to predict only for countries which had won more than eight medals across the past 6 Olympics(since Sydney 2000), in order to avoid countries(E.G. Soviet and Eugoslavic countries) that have been separated/formed along the years, and also that our generated features are from current up-to-date data which might be unrelated to results from 50+ years ago.
+In order to avoid countries(E.G. Soviet and Eugoslavic countries) that have been separated/formed/banned along the years, and also account for the fact that our generated features are from current up-to-date data which might be unrelated to results from 50+ years ago, we filtered out data from before Barcelona 1992, leaving us with 8 Summer editions to learn from.
+We used two approaches for training and testing our model: the first was to predict for all the countries which participated in Paris, and the second was to predict only for countries which had won more than six medals across the past 8 Olympics(since Barcelona).
 
 Surprisingly(but also not, since it provides much more data to learn from and more countries to predict), the first approach did far better, as we can see:
 
@@ -106,9 +110,9 @@ Surprisingly(but also not, since it provides much more data to learn from and mo
 |Random Forest|88.779773%|
 |Gradient Boosting|88.514205%|
 |Neural Network|87.904691%|
-|NN+BERT(full, total predicted)|91.66%|
-|NN+BERT(full, predicted total)|92.156%|
-|NN+BERT(recency filter)|77.142%|
+|NN+BERT(full, weighted)|91.23%|
+|NN+BERT(full, predicted total)|91.6667%|
+|NN+BERT(recency filter)|79.35%|
 
 Where the previous model results are taken from [Olympics-Medal-Prediction](https://github.com/hrugved06/Olympics-Medal-Prediction)
 The results indicate that the transformer-based approach is effective in predicting the number of medals for each country.
@@ -121,14 +125,14 @@ To use the model for predictions:
 
 1. **Ensure that the data is in place and preprocessed.**
 
-2. **Run the notebook**: Open the `DeepLearningProject_Shoham_Liad_Final.ipynb` and follow the instructions to generate predictions.
+2. **Run the notebook**: Open the `PredictingParis2024.ipynb` and follow the instructions to generate predictions.
 
 ## Future Work
 
 While working on this project, we had a few ideas for future work:
 1. Since the Olympics happen continuousely every 4 years, we can treat the results as sequential data and utilize an RNN to make predictions.
 2. We had BERT fetch features from Wikipedia API. As LLM's grow and develop, it might be beneficial to use one instead. We can also build a custom transformer model to get better results.
-3. Dimensionality reduction can be used(e.g. PCA) to reduce the number of features while emphasizing the dominant ones
+3. Dimensionality reduction can be used(e.g. PCA) to reduce the number of features while emphasizing the dominant ones.
 4. We only predicted for Summer Olympics. There's a Winter Olympics coming up in 2026 :)
 5. It can be interesting to build a model for specific athletes, rather than countries. This will be more complex and less suitable for our approach since there is naturally less data available about individual athletes than countries, both for feature extraction and for deep learning.
 
@@ -150,10 +154,9 @@ While working on this project, we had a few ideas for future work:
 - **Liad Mordechai** - [GitHub](https://github.com/liadMor123) | [LinkedIn](https://www.linkedin.com/in/liad-mordechai/)
 - ECE046211 - Spring 2024
 
-
 ## Acknowledgments
 
-This project is a part of the ECE 046211 Deep Learning course at the Technion. We would like to express our gratitude to Lior Friedman and Prof. Yossi Keshet for their guidance and support throughout this project and the course.
+This project is a part of the ECE 046211 Deep Learning course at the Technion. We would like to express our gratitude to T.A's Lior Friedman Tal Daniel and Prof. Yossi Keshet and Daniel Soudri for their guidance and support throughout this project and the course.
 
 ## License
 
