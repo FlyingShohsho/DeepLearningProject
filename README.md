@@ -7,7 +7,6 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Data](#data)
 - [Model](#model)
@@ -18,25 +17,17 @@
 
 ## Project Overview
 
-The task of predicting the Olympic medal table is complex due to the numerous factors involved. In this project, we leverage a transformer model to extract meaningful features and predict the number of medals that each country will win. The project is part of the course ECE046211 - Spring 2024, and focuses on making the prediction process more efficient and accurate.
-This project focuses on predicting Olympic outcomes using advanced machine learning techniques, specifically leveraging the Paris 2024 Olympic Games as a real-time testing ground. Inspired by the global popularity of sports predictions and the significance of the Olympics, we aim to apply transformer-based models to automate feature extraction from plain text data.
+The task of predicting the Olympic medal table is complex due to the numerous factors involved. In this project, we leverage a transformer model to extract meaningful features and predict the number of medals that each country will win. 
+The project is part of the course ECE046211 - Spring 2024, and focuses on making the prediction process more efficient and accurate.
+
+We aim to predict the Olympic results with a unique Deep Learning approach, using the Paris 2024 Olympic Games as a real-time testing ground. Inspired by the global popularity of sports predictions and the significance of the Olympics, we aim to apply transformer-based models to automate feature extraction from plain text data.
+
 Our approach utilizes Hugging Face's bert-base-uncased model, which extracts 768 features, potentially streamlining the data processing pipeline compared to traditional methods. 
+
 By building on previous work in Olympic predictions and incorporating the vast, well-documented Olympic dataset, we seek to create a robust prediction system that can handle the complex, human-driven nature of sports outcomes. 
+
 This project not only explores the technical aspects of machine learning in sports analytics but also taps into the cultural and social significance of Olympic predictions. 
 The project is implemented in Python using the libraries PyTorch, NumPy, Pandas and SciKit-Learn.
-
-## Project Structure
-/code
-
-    PredictingParis2024.ipynb # Main notebook containing code and analysis
-
-/data # Folder where data is stored
-
-/results #csv files with our predictions
-
-README.md # Project documentation
-
-requirements.txt # Python dependencies
 
 ## Installation
 
