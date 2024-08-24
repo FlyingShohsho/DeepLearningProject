@@ -12,6 +12,8 @@
 - [Model](#model)
 - [Results](#results)
 - [Usage](#usage)
+- [Future Work](#future-work)
+- [Sources & References](#sources-and-references)
 - [License](#license)
 - [Authors](#authors)
 
