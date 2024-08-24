@@ -62,6 +62,9 @@ Our project utilizes the Olympic Historical Dataset from Olympedia.org, availabl
 
 ## Model
 
+<p align="middle">
+  <img src="./assets/bert-base-uncased.png" height="200">
+</p>
 We used a transformer model to extract features from the input data. The model was trained using PyTorch, and the following key components were used:
 
 - **Model Architecture**: bert-base-uncased architecture for feature extraction from Wikipedia-API; 3-layer Neural Network with Dropout and ReLU activation.
