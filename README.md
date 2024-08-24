@@ -104,7 +104,7 @@ Of course, the disadvantage of our approach is that the features BERT generates 
 
 To use the model for predictions:
 
-1. **Ensure that the data is in place and preprocessed.**
+1. **Ensure that the data is in place.**
 
 2. **Run the notebook**: Open the `PredictingParis2024.ipynb` and follow the instructions to generate predictions.
 
