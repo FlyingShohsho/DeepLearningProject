@@ -13,7 +13,7 @@
 - [Results](#results)
 - [Usage](#usage)
 - [Future Work](#future-work)
-- [Sources & References](#sources-&-references)
+- [Sources and References](#sources-and-references)
 - [License](#license)
 - [Authors](#authors)
 
@@ -122,7 +122,7 @@ While working on this project, we had a few ideas for future work:
 4. We only predicted for Summer Olympics. There's a Winter Olympics coming up in 2026 :)
 5. It can be interesting to build a model for specific athletes, rather than countries. This will be more complex and less suitable for our approach since there is naturally less data available about individual athletes than countries, both for feature extraction and for deep learning.
 
-## Sources & References
+## Sources and References
 ### Sources
 * The datasets were taken from Kaggle: [Olympic Historical Dataset From Olympedia.org](https://www.kaggle.com/datasets/josephcheng123456/olympic-historical-dataset-from-olympediaorg/data), [Paris 2024 Olympic Summer Games](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games).
 * The Neural Network and Optuna implementation is taken from [ECE 046211 Tutorials](https://github.com/taldatech/ee046211-deep-learning)
