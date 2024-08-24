@@ -122,6 +122,7 @@ While working on this project, we had a few ideas for future work:
 * [Attention is All You Need](https://arxiv.org/abs/1706.03762)
 * [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
 * [google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased?text=The+goal+of+life+is+%5BMASK%5D)
+* [Predicting Medal Counts in Olympics Using Machine Learning Algorithms A Comparative Analysis](https://www.researchgate.net/profile/Nongmeikapam-Thoiba-Singh/publication/378535086_Predicting_Medal_Counts_in_Olympics_Using_Machine_Learning_Algorithms_A_Comparative_Analysis/links/65f5549d1f0aec67e29d3db3/Predicting-Medal-Counts-in-Olympics-Using-Machine-Learning-Algorithms-A-Comparative-Analysis.pdf)
 
 ## Authors
 
