@@ -21,7 +21,7 @@ This project aims to simplify and enhance the accuracy of predicting the number 
 The task of predicting the Olympic medal table is complex due to the numerous factors involved. In this project, we leverage a transformer model to extract meaningful features and predict the number of medals that each country will win. The project is part of the course ECE046211 - Spring 2024, and focuses on making the prediction process more efficient and accurate.
 
 ## Project Structure
-/notebooks
+/code
 
     PredictingParis2024.ipynb # Main notebook containing code and analysis
 
@@ -40,7 +40,7 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/FlyingShosho/olympic-medal-prediction.git
+    git clone https://github.com/FlyingShosho/DeepLearningProject.git
     cd olympic-medal-prediction
     ```
 
