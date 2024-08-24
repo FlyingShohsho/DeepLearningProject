@@ -33,30 +33,9 @@ README.md # Project documentation
 
 requirements.txt # Python dependencies
 
-
 ## Installation
 
-To set up this project locally, follow these steps:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/FlyingShosho/DeepLearningProject.git
-    cd olympic-medal-prediction
-    ```
-
-2. **Create a virtual environment** (optional but recommended):
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. **Install the required packages**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Download the data** (if applicable):
-    - Instructions for downloading and placing the data into the `/data` directory.
+Our project is fully integrated in a Jupyter Notebook. See `PredictingParis2024.ipynb`.
 
 ### Prerequisites
 |Library         | Version |
